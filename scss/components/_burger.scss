@@ -1,0 +1,50 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.burger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    height: 3px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+
+    &:nth-child(1) {
+      top: 12px;
+    }
+    &:nth-child(2) {
+      top: 20px;
+    }
+    &:nth-child(3) {
+      top: 28px;
+    }
+  }
+
+  &.is-open {
+    span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+}
+
+@include m.mq(v.$bp-md) {
+  .burger {
+    display: inline-block;
+  }
+}

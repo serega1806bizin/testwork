@@ -1,0 +1,68 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.header {
+  background: var(--bg-dark);
+  padding-block: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: var(--shadow-lg);
+
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    height: 40px;
+    filter: drop-shadow(0 0 10px var(--accent-cyan));
+  }
+
+  .nav {
+    display: flex;
+    gap: 20px;
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--accent-cyan);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        height: 2px;
+        background: var(--accent-cyan);
+        transition: width 0.3s;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .auth {
+    display: flex;
+    gap: 10px;
+  }
+
+  @include m.mq(v.$bp-md) {
+    .header__inner {
+      flex-direction: row;
+    }
+    .nav,
+    .auth {
+      display: none;
+    }
+  }
+}

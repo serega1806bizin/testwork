@@ -1,0 +1,45 @@
+.footer {
+  background: var(--bg-dark);
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 60px;
+
+  .footer-nav {
+    margin-bottom: 15px;
+
+    a {
+      margin: 0 15px;
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.3s;
+      font-weight: 600;
+
+      &:hover {
+        color: var(--accent-cyan);
+      }
+    }
+  }
+
+  .payments {
+    margin-bottom: 15px;
+
+    img {
+      height: 30px;
+      margin: 0 10px;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .copy {
+    font-size: 14px;
+    color: #666;
+    a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
+  }
+}

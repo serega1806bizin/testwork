@@ -1,0 +1,45 @@
+.banner {
+  position: relative;
+
+  &__media,
+  &__img {
+    display: block;
+    width: 100%;
+    height: clamp(200px, 35vw, 400px);
+    object-fit: cover;
+    background-color: #111;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25));
+    display: grid;
+    place-items: center;
+  }
+
+  &__content {
+    text-align: center;
+    color: #fff;
+
+    h2 {
+      font-weight: 700;
+      font-size: clamp(1.6rem, 1.2rem + 2vw, 3rem);
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      animation: fadeInDown 1.2s ease forwards;
+    }
+  }
+}
+
+.btn-bonus {
+  font-weight: 700;
+  background: var(--accent-pink);
+  color: #fff;
+  padding: 14px 30px;
+  font-size: 18px;
+  border-radius: 35px;
+  opacity: 0;
+  animation: fadeInUp 1.2s 0.5s forwards;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="dark light" />
+    <title>Cosmobet Casino</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      href="/img/banner-1200.jpg"
+      imagesrcset="/img/banner-400.jpg 400w, /img/banner-768.jpg 768w, /img/banner-1200.jpg 1200w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="https://cosmobet.com/en">
+          <img
+            src="https://static.inpcdn.com/108,1b56f7008ebe22.webp"
+            alt="Cosmobet"
+            class="logo"
+            decoding="async"
+          />
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#home">Home</a>
+          <a href="#review">Review</a>
+          <a href="#bonus">Bonus</a>
+          <a href="#spins">Spins</a>
+        </nav>
+
+        <div class="auth">
+          <button class="btn btn-reg">Sign Up</button>
+          <button class="btn btn-login">Log In</button>
+        </div>
+
+        <button
+          class="burger"
+          aria-label="Open menu"
+          aria-controls="mobileNav"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <nav
+      id="mobileNav"
+      class="mobile-nav"
+      aria-hidden="true"
+      role="navigation"
+      tabindex="-1"
+      aria-label="Mobile"
+    >
+      <div class="mobile-nav__head">
+        <img
+          src="https://static.inpcdn.com/108,1b56f7008ebe22.webp"
+          alt="Cosmobet"
+          class="logo"
+          width="120"
+          decoding="async"
+        />
+        <button class="mobile-nav__close" aria-label="Close menu">✕</button>
+      </div>
+
+      <a href="#home">Home</a>
+      <a href="#review">Review</a>
+      <a href="#bonus">Bonus</a>
+      <a href="#spins">Spins</a>
+
+      <div class="mobile-nav__auth">
+        <button class="btn btn-login">Login</button>
+        <button class="btn btn-reg">Registration</button>
+      </div>
+    </nav>
+    <div class="backdrop" hidden></div>
+
+    <main class="content">
+      <section id="home" class="intro container">
+        <h1>Cosmobet Casino</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec
+          neque non ligula cursus viverra.
+        </p>
+      </section>
+
+      <section id="bonus" class="banner">
+        <picture class="banner__media">
+          <source
+            media="(max-width: 400px)"
+            srcset="https://static.inpcdn.com/106,1abb373a23f883.webp"
+          />
+          <source
+            media="(max-width: 768px)"
+            srcset="https://static.inpcdn.com/105,1aba5b6c340e5d.webp"
+          />
+          <source
+            media="(max-width: 1200px)"
+            srcset="https://static.inpcdn.com/106,1abc58f06a79b5.webp"
+          />
+          <img
+            src="https://static.inpcdn.com/106,1abb373a23f883.webp"
+            alt="Casino welcome bonus"
+            class="banner__img"
+            decoding="async"
+            fetchpriority="high"
+            sizes="100vw"
+          />
+        </picture>
+
+        <div class="banner__overlay">
+          <div class="banner__content">
+            <h2>Free bonus</h2>
+            <button class="btn btn-bonus">Get bonus</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="review" class="text container">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          potenti. Nullam at sapien sed velit feugiat rutrum.
+        </p>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#">Contacts</a>
+          <a href="#">Rules</a>
+          <a href="#">FAQ</a>
+        </nav>
+        <div class="payments">
+          <img
+            src="https://cosmobet.com/assets/images/footer/payments/visa.png"
+            alt="Visa"
+            height="30"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Maestro_2016.svg/120px-Maestro_2016.svg.png"
+            alt="Maestro"
+            height="30"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="https://cosmobet.com/assets/images/footer/payments/skrill.svg"
+            alt="Skrill"
+            width="60"
+            height="30"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p class="copy">Copyright 2025 <a href="https://cosmobet.com/en">cosmobet.com</a></p>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

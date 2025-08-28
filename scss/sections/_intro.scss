@@ -1,0 +1,27 @@
+.intro {
+  text-align: center;
+  margin: 60px auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: clamp(2rem, 2.2rem + 1.6vw, 3rem);
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, var(--accent-pink), var(--accent-cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  p {
+    color: #ccc;
+    font-size: 1.1rem;
+  }
+}

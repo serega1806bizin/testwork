@@ -1,0 +1,39 @@
+.btn {
+  font-family: inherit;
+  font-weight: 700;
+  padding: 10px 10px;
+  border: 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  letter-spacing: 0.5px;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.btn-login,
+.btn--login {
+  background: var(--accent-cyan);
+  color: #000;
+}
+.btn-reg,
+.btn--reg {
+  background: var(--accent-pink);
+  color: #fff;
+}
+
+@media (hover: none) {
+  .btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .nav a:hover {
+    color: var(--text);
+  }
+  .nav a:hover::after {
+    width: 0;
+  }
+}
